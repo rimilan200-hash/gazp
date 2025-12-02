@@ -8,7 +8,10 @@
 </head>
 <body>
   <header class="top-nav">
-    <div class="logo">Газстройпром</div>
+    <div class="logo" aria-label="Газстройпром">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">Газстройпром</span>
+    </div>
     <nav class="nav-links" aria-label="Основное меню">
       <a href="#about">О программе</a>
       <a href="#materials">Материалы</a>
@@ -24,9 +27,37 @@
   </header>
 
   <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Программа по целеполаганию</p>
+          <h1>Единые правила постановки и оценки целей в Газстройпроме</h1>
+          <p class="hero-lead">Прозрачные критерии, согласование со стратегией и понятные инструменты для руководителей и команд.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#materials">Перейти к материалам</a>
+            <a class="btn btn-outline" href="регламент.docx" download>Скачать регламент (.docx)</a>
+          </div>
+        </div>
+        <div class="hero-badges">
+          <div class="badge-card">
+            <span class="badge-number">01</span>
+            <p>Согласованные цели связывают команду с приоритетами ГСП.</p>
+          </div>
+          <div class="badge-card">
+            <span class="badge-number">02</span>
+            <p>Методические рекомендации и шаблоны всегда под рукой.</p>
+          </div>
+          <div class="badge-card">
+            <span class="badge-number">03</span>
+            <p>Промежуточные срезы помогают удерживать темп исполнения.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section">
       <div class="section-header">
-        <h1>О программе по целеполаганию</h1>
+        <h2>О программе по целеполаганию</h2>
         <p class="lead">Программа помогает связать индивидуальные цели сотрудников с приоритетами Газстройпрома, обеспечивает прозрачность ожиданий и единые подходы к оценке.</p>
       </div>
       <div class="grid two-col">
@@ -64,10 +95,9 @@
           <h3>Регламент и методические материалы</h3>
           <p>Формальные правила, сроки и порядок оценивания описаны в официальных документах. Здесь — краткое напоминание, детали всегда уточняйте в PDF.</p>
           <div class="buttons">
-            <!-- Замените # на ссылку к файлу регламента -->
-            <a class="btn" href="#" download>Скачать регламент (PDF)</a>
-            <!-- Замените # на ссылку к методическим рекомендациям -->
-            <a class="btn btn-outline" href="#" download>Скачать методические рекомендации (PDF)</a>
+            <!-- Замените ссылки на реальные файлы регламента и методички -->
+            <a class="btn" href="регламент.docx" download>Скачать регламент (.docx)</a>
+            <a class="btn btn-outline" href="methodology.pdf" download>Скачать методические рекомендации (PDF)</a>
           </div>
         </div>
       </div>
@@ -138,8 +168,8 @@
           <div class="card material">
             <h4>Шаблон цели</h4>
             <p>Структура описания цели и критериев.</p>
-            <!-- Подставьте ссылку на файл шаблона -->
-            <a class="btn" href="#">Скачать</a>
+            <!-- Файл шаблона карты целей (шаблон.xlsx) разместите в корне рядом с index.html -->
+            <a class="btn" href="шаблон.xlsx" download>Скачать шаблон (.xlsx)</a>
           </div>
           <div class="card material">
             <h4>План развития</h4>
