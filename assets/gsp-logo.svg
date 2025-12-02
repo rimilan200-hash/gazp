@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="92" viewBox="0 0 320 92" role="img" aria-labelledby="title desc">
+  <title id="title">Логотип Газстройпрома</title>
+  <desc id="desc">Синий прямоугольник с белой надписью Газстройпром</desc>
+  <rect width="320" height="92" rx="6" fill="#0A75C0" />
+  <text x="50%" y="50%" fill="#ffffff" font-family="'Arial Black', 'Segoe UI', system-ui, sans-serif" font-size="32" font-weight="700" dominant-baseline="middle" text-anchor="middle" letter-spacing="1.5">ГАЗСТРОЙПРОМ</text>
+</svg>
