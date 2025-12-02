@@ -98,6 +98,31 @@ body {
   line-height: 1.2;
 }
 
+.hero-copy {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(110, 173, 217, 0.12));
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 16px 38px rgba(0, 69, 124, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-copy::after {
+  content: '';
+  position: absolute;
+  inset: -6px -10px auto auto;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(110, 173, 217, 0.25), transparent 60%);
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.hero-copy * {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-lead {
   margin: 0 0 18px;
   color: var(--color-text-muted);
@@ -129,13 +154,14 @@ body {
 }
 
 .hero-visual {
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(110, 173, 217, 0.18));
-  border-radius: 18px;
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 18px 48px rgba(0, 69, 124, 0.15);
+  background: radial-gradient(circle at 20% 20%, rgba(110, 173, 217, 0.18), transparent 45%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(110, 173, 217, 0.12));
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 22px 60px rgba(0, 69, 124, 0.18);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .hero-visual::before,
@@ -163,50 +189,14 @@ body {
   left: -30px;
 }
 
-.logo-ribbon {
+.hero-orbital {
   position: absolute;
-  inset: 12px -18px auto -18px;
-  height: 68px;
-  background: linear-gradient(90deg, rgba(0, 69, 124, 0.14), rgba(110, 173, 217, 0.18));
+  inset: -40px -60px -40px -60px;
+  background: radial-gradient(circle at 30% 30%, rgba(110, 173, 217, 0.26), transparent 42%),
+    radial-gradient(circle at 80% 10%, rgba(0, 69, 124, 0.18), transparent 45%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.36), transparent 55%);
   filter: blur(6px);
-  border-radius: 14px;
   z-index: 0;
-}
-
-.hero-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 12px 28px rgba(0, 69, 124, 0.12);
-  position: relative;
-  z-index: 1;
-}
-
-.hero-logo img {
-  width: 140px;
-  height: auto;
-  display: block;
-}
-
-.logo-text-block {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.logo-caption {
-  color: var(--color-text-muted);
-  font-size: 0.92rem;
-}
-
-.logo-subline {
-  color: var(--color-primary);
-  font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .hero-badges {
@@ -277,7 +267,7 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
-.logo {
+.brand {
   font-weight: 700;
   letter-spacing: 0.3px;
   display: inline-flex;
@@ -285,28 +275,27 @@ a {
   gap: 10px;
 }
 
-.logo-img {
-  height: 40px;
-  width: auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
-}
-
-.logo-mark {
+.brand-mark {
   width: 34px;
   height: 34px;
-  border-radius: 8px;
-  background: linear-gradient(145deg, #ffffff 0%, var(--color-primary-light) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.5));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35), 0 6px 12px rgba(0, 0, 0, 0.12);
   position: relative;
 }
 
-.logo-mark::after {
+.brand-mark::after {
   content: '';
   position: absolute;
   inset: 9px;
-  border-radius: 4px;
-  background: var(--color-primary);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55));
+}
+
+.brand-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-links {
@@ -347,13 +336,6 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 96px 20px 64px;
-}
-
-.section-logo {
-  height: 46px;
-  width: auto;
-  margin: 6px 0 10px;
-  filter: drop-shadow(0 6px 12px rgba(0, 69, 124, 0.15));
 }
 
 .section {
